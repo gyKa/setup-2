@@ -14,13 +14,20 @@ Select following entries:
 
 5) Enable Camera > Disable
 
+8) Advanced Options > Hostname > Enter 'allez'
+
 8) Advanced Options > Memory Split > 16
 
-9) Advanced Options > Serial > No
-
-10) Advanced Options > Hostname > allez
+8) Advanced Options > Serial > No
 
 Then select "Finish" and "Yes".
 
-After reboot, change default account password, download `setup.sh` from this
-directory and run `bash setup.sh`.
+After reboot, change default account password.
+
+## Prepare setup
+
+Download `setup.sh` from this directory:
+
+`wget https://raw.githubusercontent.com/gyKa/setup-2/raspberry-pi-model-b_allez/setup.sh`
+
+And run `bash setup.sh`. After work, delete this file by running `rm setup.sh`.
