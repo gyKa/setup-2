@@ -17,3 +17,6 @@ sudo apt-get autoremove --purge -y
 
 # Upgrade software packages.
 sudo apt-get upgrade -y
+
+# Install fail2ban.
+sudo apt-get install -y fail2ban
