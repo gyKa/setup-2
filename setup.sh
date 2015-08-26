@@ -20,3 +20,6 @@ sudo apt-get upgrade -y
 
 # Install fail2ban.
 sudo apt-get install -y fail2ban
+
+# Install VIM.
+sudo apt-get install -y vim
