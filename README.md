@@ -31,3 +31,7 @@ Download `setup.sh` from this directory:
 `wget https://raw.githubusercontent.com/gyKa/setup-2/raspberry-pi-model-b_allez/setup.sh`
 
 And run `bash setup.sh`. After work, delete this file by running `rm setup.sh`.
+
+## Locales
+
+Add `LC_ALL="en_US.utf8"`to */etc/environment* and reboot.
