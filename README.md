@@ -35,3 +35,12 @@ And run `bash setup.sh`. After work, delete this file by running `rm setup.sh`.
 ## Locales
 
 Add `LC_ALL="en_US.utf8"`to */etc/environment* and reboot.
+
+## Backup
+
+Check the blockdevices using `lsblk` command. Then prepare backup directory:
+
+```
+sudo mkdir /media/backup
+sudo mount -t vfat /dev/sda1 /media/backup
+```
