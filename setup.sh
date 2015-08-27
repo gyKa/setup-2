@@ -26,3 +26,6 @@ sudo apt-get install -y vim
 
 # Install screen.
 sudo apt-get install -y screen
+
+# Install irssi.
+sudo apt-get install -y irssi
