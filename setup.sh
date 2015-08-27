@@ -34,3 +34,17 @@ sudo apt-get install -y irssi
 wget https://raw.githubusercontent.com/gyKa/setup-2/raspberry-pi-model-b_allez/.irssi/config
 mv config ~/.irssi/
 chmod 0640 ~/.irssi/config
+
+# Install Rbenv.
+## Check out rbenv into ~/.rbenv .
+git clone git://github.com/sstephenson/rbenv.git .rbenv
+## Add ~/.rbenv/bin to your $PATH for access to the rbenv command-line utility.
+echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
+## Add rbenv init to your shell to enable shims and autocompletion.
+echo 'eval "$(rbenv init -)"' >> ~/.bashrc
+## Restart your shell so that PATH changes take effect.
+exec $SHELL
+## ruby-build is an rbenv plugin that provides an rbenv install command to compile and install different versions of Ruby on UNIX-like systems.
+git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
+echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bashrc
+exec $SHELL
