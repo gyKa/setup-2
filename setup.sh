@@ -29,3 +29,8 @@ sudo apt-get install -y screen
 
 # Install irssi.
 sudo apt-get install -y irssi
+
+# Configure irssi.
+wget https://raw.githubusercontent.com/gyKa/setup-2/raspberry-pi-model-b_allez/.irssi/config
+mv config ~/.irssi/
+chmod 0640 ~/.irssi/config
