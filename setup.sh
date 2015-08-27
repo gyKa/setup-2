@@ -23,3 +23,6 @@ sudo apt-get install -y fail2ban
 
 # Install VIM.
 sudo apt-get install -y vim
+
+# Install screen.
+sudo apt-get install -y screen
