@@ -35,6 +35,9 @@ wget https://raw.githubusercontent.com/gyKa/setup-2/raspberry-pi-model-b_allez/.
 mv config ~/.irssi/
 chmod 0640 ~/.irssi/config
 
+# Install some Ruby dependencies.
+sudo apt-get install -y libssl-dev libreadline-dev
+
 # Install Rbenv.
 ## Check out rbenv into ~/.rbenv .
 git clone git://github.com/sstephenson/rbenv.git .rbenv
