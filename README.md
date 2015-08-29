@@ -38,9 +38,38 @@ Add `LC_ALL="en_US.utf8"`to */etc/environment* and reboot.
 
 ## Backup
 
-Check the blockdevices using `lsblk` command. Then prepare backup directory:
+Check the blockdevices using `lsblk` command. Then prepare backup directory assuming your user's UID is 1000, GID is 1000 :
 
 ```
 sudo mkdir /media/backup
-sudo mount -t vfat /dev/sda1 /media/backup
+sudo mount -t vfat /dev/sda1 /media/backup -o uid=1000,gid=1000,umask=022
+```
+**umask=022** sets permission mode 755 for all files on the partition.
+
+Backup model in `/home/pi/Backup/models/pi_backup.rb` should look like this:
+
+```ruby
+Model.new(:pi_backup, 'PI backup') do
+  archive :lists do |archive|
+    archive.add '/home/pi/Lists/'
+  end
+
+  store_with Local do |local|
+    local.path = '/media/backup/'
+    local.keep = 5
+  end
+end
+```
+
+Let's grab the executable path:
+
+```
+which backup
+# /home/pi/.rbenv/shims/backup
+```
+
+And now let's type `crontab -e` to setup cron job. Add a line at the bottom that looks like the following:
+
+```
+0 0 * * * /bin/bash -l -c '/home/pi/.rbenv/shims/backup perform -t pi_backup'
 ```
