@@ -51,3 +51,10 @@ exec $SHELL
 git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
 echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bashrc
 exec $SHELL
+
+# Install Ruby.
+rbenv install 2.2.2
+rbenv global 2.2.2
+
+# Install Backup gem.
+gem install backup
