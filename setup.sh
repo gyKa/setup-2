@@ -58,3 +58,4 @@ rbenv global 2.2.2
 
 # Install Backup gem.
 gem install backup
+backup generate:model --trigger pi_backup
