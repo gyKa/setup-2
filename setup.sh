@@ -59,3 +59,9 @@ rbenv global 2.2.2
 # Install Backup gem.
 gem install backup
 backup generate:model --trigger pi_backup
+
+# Install IRC bot framework Cinch.
+gem install cinch
+
+# Install my bot.
+git clone https://github.com/gyKa/sekhmeta.git
