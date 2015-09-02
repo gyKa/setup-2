@@ -50,8 +50,9 @@ Backup model in `/home/pi/Backup/models/pi_backup.rb` should look like this:
 
 ```ruby
 Model.new(:pi_backup, 'PI backup') do
-  archive :lists do |archive|
-    archive.add '/home/pi/Lists/'
+  archive :txts do |archive|
+    archive.add '/home/pi/Uzrasai/'
+    archive.add '/home/pi/Sprintai/'
   end
 
   store_with Local do |local|
