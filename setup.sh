@@ -11,7 +11,11 @@ sudo apt-get remove --purge -y python-picamera python3-picamera \
     python-rpi.gpio python3-rpi.gpio gnome-themes-standard-data \
     gnome-icon-theme zenity zenity-common xserver-xorg-core xserver-common \
     sonic-pi lxde lxde-common lxde-core lxde-icon-theme penguinspuzzle \
-    raspberrypi-artwork epiphany-browser supercollider wolfram-engine
+    raspberrypi-artwork epiphany-browser supercollider wolfram-engine \
+    alsa-base alsa-utils cups-bsd cups-client cups-common desktop-file-utils \
+    dillo idle idle-python2.7 idle-python3.2 idle3 openbox galculator \
+    lxtask lxappearance lxinput lxmenu-data lxpanel lxshortcut lxpolkit \
+    leafpad minecraft-pi ed nano jackd jackd2 menu xpdf esound-common
 
 sudo apt-get autoremove --purge -y
 
