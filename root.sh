@@ -10,6 +10,6 @@ echo "==> Adding new user..."
 adduser gytis
 
 echo "==> Disabling root login over SSH..."
-echo "    PermitRootLogin no" >> /etc/ssh/ssh_config
-/etc/init.d/ssh reload
+sed -i '/PermitRootLogin/ s/yes/no/' /etc/ssh/sshd_config
+service ssh reload
 
