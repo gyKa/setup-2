@@ -9,7 +9,7 @@ sudo apt-get install -y virtualbox-guest-utils virtualbox-guest-x11 virtualbox-g
 # Upload generated SSH key to Github.
 ssh-keygen -t rsa -b 4096 -C "vm@ubuntu-mate-15_10"
 
-sudo apt-get install -y git gitg pgadmin3
+sudo apt-get install -y git gitg pgadmin3 vim
 
 git config --global user.email "gytis@karciauskas.lt"
 git config --global user.name "Gytis Karčiauskas"
