@@ -1,0 +1,17 @@
+---
+- name: create web storage
+  file: path=/var/www/karciauskas/public state=directory owner=www-data group=www-data mode=0775 recurse=yes
+  become: yes
+  become_method: sudo
+
+- name: copy apache configuration
+  template: src=default.conf dest=/etc/apache2/sites-available/karciauskas.conf
+  notify: restart apache
+  become: yes
+  become_method: sudo
+
+- name: enable site
+  command: a2ensite karciauskas
+  notify: restart apache
+  become: yes
+  become_method: sudo

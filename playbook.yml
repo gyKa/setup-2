@@ -1,12 +1,7 @@
 ---
-- hosts: all
-  tasks:
-    - name: update repositories cache
-      apt: update_cache=yes
-      become: yes
-      become_method: sudo
-
-    - name: update all packages to the latest version
-      apt: upgrade=dist
-      become: yes
-      become_method: sudo
+- name: install and configure software and sites for my vps
+  hosts: all
+  roles:
+    - os
+    - apache
+    - site-karciauskas
