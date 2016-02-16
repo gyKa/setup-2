@@ -14,3 +14,7 @@ locale-gen en_US.UTF-8
 ```
 
 Logout, login, and then command `perl -e exit` should output nothing.
+
+## Ansible
+
+`ansible-playbook -i hosts playbook.yml --user root`
