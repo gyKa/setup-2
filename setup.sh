@@ -1,33 +1,5 @@
 #!/bin/sh
 
-# Update information about sofware packages.
-sudo apt-get update -y
-
-# Remove useless files.
-sudo rm -rf ~/python_games/
-
-# Remove useless packages.
-sudo apt-get remove --purge -y python-picamera python3-picamera \
-    python-rpi.gpio python3-rpi.gpio gnome-themes-standard-data \
-    gnome-icon-theme zenity zenity-common xserver-xorg-core xserver-common \
-    sonic-pi lxde lxde-common lxde-core lxde-icon-theme penguinspuzzle \
-    raspberrypi-artwork epiphany-browser supercollider wolfram-engine \
-    alsa-base alsa-utils cups-bsd cups-client cups-common desktop-file-utils \
-    dillo idle idle-python2.7 idle-python3.2 idle3 openbox galculator \
-    lxtask lxappearance lxinput lxmenu-data lxpanel lxshortcut lxpolkit \
-    leafpad minecraft-pi ed nano jackd jackd2 menu xpdf esound-common \
-    desktop-base fonts-freefont-ttf freepats gconf2 gsfonts \
-    gsettings-desktop-schemas gstreamer1.0-alsa gstreamer1.0-omx \
-    gstreamer0.10-plugins-base gstreamer1.0-plugins-base gstreamer1.0-x \
-    gstreamer1.0-libav gtk2-engines hicolor-icon-theme java-common \
-    libgtk-3-0 libqtgui4 libgif4 lxrandr lxsession lxsession-edit \
-    menu-xdg oracle-java8-jdk samba-common scratch xarchiver
-
-sudo apt-get autoremove --purge -y
-
-# Upgrade software packages.
-sudo apt-get upgrade -y
-
 # Install fail2ban.
 sudo apt-get install -y fail2ban
 
